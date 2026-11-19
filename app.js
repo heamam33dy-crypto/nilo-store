@@ -1,4 +1,4 @@
-const products = [
+   {id:1,category:'tops',name:{ar:'قميص لينين يومي',en:'Everyday Linen Shirt'},price:780,image:'./216282324_hvy_in.webp',badge:{ar:'الأكثر طلبًا',en:'Best seller'}},
     {id:1,category:'tops',name:{ar:'تيشيرت بولو كحلي',en:'Navy Polo T-Shirt'},price:780,image:'./images/polo-blue.jpg',badge:{ar:'الأكثر طلبًا',en:'Best seller'}},
   {id:2,category:'bottoms',name:{ar:'بنطلون واسع مريح',en:'Relaxed Wide-Leg Trousers'},price:920,image:'https://images.unsplash.com/photo-1506629905607-d9b1c9a0f4e3?auto=format&fit=crop&w=700&q=80,badge:{ar:'جديد',en:'New'}},
   {id:3,category:'outerwear',name:{ar:'جاكيت خفيف',en:'The Easy Jacket'},price:1350,image:'https://images.unsplash.com/photo-1548126032-079a0fb0099d?auto=format&fit=crop&w=700&q=80',badge:{ar:'جديد',en:'New'}},
