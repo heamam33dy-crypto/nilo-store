@@ -1,5 +1,5 @@
 const products = [
-  {id:1,category:'tops',name:{ar:'تيشرت اسود',en:'Everyday Linen Shirt'},price:780,image:'https://https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTNcjt9FI9_BUMbhf04n6bby2OSsNLtafmrVxtpJ-Ko2DJxC6Yp1jbriZoyLLcnAJfnJfNhfNKmys_1NMtky8Gsw59vBuxHbcvNIAPmFbs',badge:{ar:'الأكثر مبيعاً',en:'Bestseller'}},
+  {id:1,category:'tops',name:{ar:'تيشرت اسود',en:'Everyday Linen Shirt'},price:780,image:'https://ounass-sa.atgcdn.ae/small_light(p=zoom,of=webp,q=65)/pub/media/catalog/product/2/1/219385799_white_in.jpg?ts=1770960395.2937',badge:{ar:'الأكثر مبيعاً',en:'Bestseller'}},
   {id:2,category:'bottoms',name:{ar:'بنطلون واسع مريح',en:'Relaxed Wide-Leg Trousers'},price:920,image:'https://images.unsplash.com/photo-1506629905607-d9b1c9a0f4e3?auto=format&fit=crop&w=700&q=80'},
   {id:3,category:'outerwear',name:{ar:'جاكيت خفيف',en:'The Easy Jacket'},price:1350,image:'https://images.unsplash.com/photo-1548126032-079a0fb0099d?auto=format&fit=crop&w=700&q=80',badge:{ar:'جديد',en:'New'}},
   {id:4,category:'sets',name:{ar:'طقم يومي ناعم',en:'Soft Everyday Set'},price:1190,image:'https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=700&q=80'},
