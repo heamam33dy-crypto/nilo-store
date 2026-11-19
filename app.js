@@ -1,5 +1,5 @@
 const products = [
-  {id:1,category:'tops',name:{ar:'تيشرت ابيض',en:'Everyday Linen Shirt'},price:780,image:'blob:https://chatgpt.com/9e6c4005-9a4d-4769-a1ba-23a182731a5b',badge:{ar:'الأكثر مبيعاً',en:'Bestseller'}},
+  {id:1,category:'tops',name:{ar:'تيشرت اسود بولو',en:'Everyday Linen Shirt'},price:780,image:'blob:https://chatgpt.com/9e6c4005-9a4d-4769-a1ba-23a182731a5b',badge:{ar:'الأكثر مبيعاً',en:'Bestseller'}},
   {id:2,category:'bottoms',name:{ar:'بنطلون واسع مريح',en:'Relaxed Wide-Leg Trousers'},price:920,image:'https://images.unsplash.com/photo-1506629905607-d9b1c9a0f4e3?auto=format&fit=crop&w=700&q=80'},
   {id:3,category:'outerwear',name:{ar:'جاكيت خفيف',en:'The Easy Jacket'},price:1350,image:'https://images.unsplash.com/photo-1548126032-079a0fb0099d?auto=format&fit=crop&w=700&q=80',badge:{ar:'جديد',en:'New'}},
   {id:4,category:'sets',name:{ar:'طقم يومي ناعم',en:'Soft Everyday Set'},price:1190,image:'https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=700&q=80'},
