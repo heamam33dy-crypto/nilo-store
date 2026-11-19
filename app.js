@@ -7,8 +7,8 @@ const products = [
   {id:6,category:'bottoms',name:{ar:'جينز قصة مستقيمة',en:'Straight-Leg Denim'},price:1050,image:'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=700&q=80'},
   {id:7,category:'outerwear',name:{ar:'قميص جاكيت قطني',en:'Cotton Overshirt'},price:990,image:'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=80'},
   {id:8,category:'sets',name:{ar:'طقم مريح قطعتين',en:'Two-Piece Lounge Set'},price:1290,image:'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80'}
+  {id:9,category:'bottoms',name:{ar:'جينز أزرق فاتح بقصة مستقيمة',en:'Light Blue Straight-Leg Jeans'},price:1050,image:'./light-blue-jeans.jpg'},
 ];
-
 const categoryNames={tops:{ar:'توبات',en:'Tops'},bottoms:{ar:'بناطيل',en:'Bottoms'},outerwear:{ar:'جاكيتات',en:'Outerwear'},sets:{ar:'أطقم',en:'Sets'}};
 let language='ar';
 let activeCategory='all';
