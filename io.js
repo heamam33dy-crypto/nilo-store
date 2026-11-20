@@ -1,0 +1,24 @@
+const products=[
+{id:1,category:'tops',name:'تيشيرت أساسي أوف وايت',en:'Essential Off-White Tee',price:590,image:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85',tag:'أساسي'},
+{id:2,category:'tops',name:'قميص كتان بيج',en:'Beige Linen Shirt',price:990,image:'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=700&q=85',tag:'جديد'},
+{id:3,category:'bottoms',name:'جينز أزرق مستقيم',en:'Straight Blue Jeans',price:1190,image:'https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=85',tag:''},
+{id:4,category:'outerwear',name:'جاكيت يومي خفيف',en:'Everyday Lightweight Jacket',price:1590,image:'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=85',tag:'مختار لك'},
+{id:5,category:'tops',name:'تيشيرت بولو كحلي',en:'Navy Polo Shirt',price:850,image:'https://images.unsplash.com/photo-1625910513413-5fc4e6d9d5a5?auto=format&fit=crop&w=700&q=85',tag:''},
+{id:6,category:'bottoms',name:'بنطلون تشينو زيتي',en:'Olive Chino Trousers',price:1090,image:'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=700&q=85',tag:''},
+{id:7,category:'tops',name:'قميص أوكسفورد أزرق',en:'Blue Oxford Shirt',price:1150,image:'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=700&q=85',tag:'جديد'},
+{id:8,category:'outerwear',name:'جاكيت جينز كلاسيك',en:'Classic Denim Jacket',price:1790,image:'https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=700&q=85',tag:''}
+];
+let category='all',cart=[];
+try{const saved=JSON.parse(localStorage.getItem('io-cart')||'[]');if(Array.isArray(saved))cart=saved}catch{}
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+const currency=n=>new Intl.NumberFormat('ar-EG').format(n)+' ج.م.';
+function render(){const term=($('#search').value||'').trim().toLowerCase();const found=products.filter(p=>(category==='all'||p.category===category)&&(!term||p.name.toLowerCase().includes(term)||p.en.toLowerCase().includes(term)));$('#products').innerHTML=found.map(p=>`<article class="card"><div class="photo"><img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.opacity='.12'">${p.tag?`<span class="tag">${p.tag}</span>`:''}<button class="add" data-add="${p.id}" type="button">أضف للحقيبة　＋</button></div><div class="details"><div><h3>${p.name}</h3><p>${p.en}</p></div><span class="price">${currency(p.price)}</span></div></article>`).join('');$('#empty').classList.toggle('hidden',found.length>0)}
+function save(){localStorage.setItem('io-cart',JSON.stringify(cart));renderCart()}
+function renderCart(){const count=cart.reduce((s,x)=>s+x.qty,0);$('#cartCount').textContent=count;$('#cartItems').innerHTML=cart.map(x=>{const p=products.find(y=>y.id===x.id);if(!p)return'';return`<div class="cart-row"><img src="${p.image}" alt=""><div><h3>${p.name}</h3><p>${currency(p.price)}</p><div class="qty"><button data-qty="${p.id}" data-delta="-1" type="button">−</button><span>${x.qty}</span><button data-qty="${p.id}" data-delta="1" type="button">＋</button></div></div><button class="remove" data-remove="${p.id}" type="button">حذف</button></div>`}).join('');$('#cartEmpty').classList.toggle('hidden',count>0);$('#cartTotal').textContent=currency(cart.reduce((s,x)=>s+(products.find(p=>p.id===x.id)?.price||0)*x.qty,0))}
+function toast(text){const el=$('#toast');el.textContent=text;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1800)}
+function openCart(open){$('#cartPanel').classList.toggle('open',open);$('#scrim').classList.toggle('open',open);$('#cartPanel').setAttribute('aria-hidden',String(!open))}
+$('#products').addEventListener('click',e=>{const b=e.target.closest('[data-add]');if(!b)return;const id=Number(b.dataset.add),item=cart.find(x=>x.id===id);if(item)item.qty++;else cart.push({id,qty:1});save();toast('اتضافت القطعة للحقيبة')});
+$('#filters').addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(!b)return;category=b.dataset.category;$$('.filter').forEach(x=>x.classList.toggle('active',x===b));render()});
+$('#search').addEventListener('input',render);$('#cartToggle').addEventListener('click',()=>openCart(true));$('#closeCart').addEventListener('click',()=>openCart(false));$('#scrim').addEventListener('click',()=>openCart(false));
+$('#cartItems').addEventListener('click',e=>{const q=e.target.closest('[data-qty]'),r=e.target.closest('[data-remove]');if(q){const item=cart.find(x=>x.id===Number(q.dataset.qty));if(item){item.qty+=Number(q.dataset.delta);if(item.qty<1)cart=cart.filter(x=>x!==item);save()}}if(r){cart=cart.filter(x=>x.id!==Number(r.dataset.remove));save()}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')openCart(false)});$('#year').textContent=new Date().getFullYear();render();renderCart();

@@ -1,55 +1,41 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f6f3ee" />
-  <meta name="description" content="Nilo — ملابس يومية مميزة، توصيل لجميع أنحاء مصر والدفع عند الاستلام." />
-  <title>Nilo — ستايلك كل يوم</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101513">
+  <meta name="description" content="IO — ملابس رجالي يومية بتصميم بسيط وجودة مختارة. اكتشف مجموعتنا الآن.">
+  <title>IO — ملابس رجالي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="io.css">
+  <script src="io.js" defer></script>
 </head>
 <body>
-  <div class="announcement" data-ar="شحن لجميع أنحاء مصر • الدفع عند الاستلام" data-en="Delivery across Egypt • Cash on delivery">شحن لجميع أنحاء مصر • الدفع عند الاستلام</div>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Nilo home">nilo<span>.</span></a>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-      <a href="#shop" data-ar="تسوقي الآن" data-en="Shop">تسوقي الآن</a>
-      <a href="#about" data-ar="عن Nilo" data-en="About Nilo">عن Nilo</a>
-    </nav>
-    <div class="header-actions">
-      <button class="icon-button language-button" id="languageButton" aria-label="Switch language">EN</button>
-      <button class="icon-button cart-button" id="openCart" aria-label="Open shopping cart"><span class="bag-icon">▱</span><span class="cart-count" id="cartCount">0</span></button>
-    </div>
+  <div class="topline">توصيل لجميع أنحاء مصر <span>•</span> الدفع عند الاستلام</div>
+  <header class="header" id="home">
+    <a class="logo" href="#home" aria-label="IO الصفحة الرئيسية">IO<span>.</span></a>
+    <nav aria-label="التنقل الرئيسي"><a href="#home">الرئيسية</a><a href="#shop">تسوق</a><a href="#about">عن IO</a></nav>
+    <button class="cart-toggle" id="cartToggle" type="button" aria-label="افتح سلة التسوق">الحقيبة <span id="cartCount">0</span></button>
   </header>
   <main>
-    <section class="hero" id="home">
-      <div class="hero-copy">
-        <p class="eyebrow" data-ar="ستايل بسيط، حضور مختلف" data-en="Easy style, made to stand out">ستايل بسيط، حضور مختلف</p>
-        <h1 data-ar="كل يوم،<br>ستايل يشبهك." data-en="Every day,<br>your kind of style.">كل يوم،<br>ستايل يشبهك.</h1>
-        <p class="hero-description" data-ar="قطع مختارة بعناية لتكون جزءاً من يومك. اكتشفي مجموعتنا الجديدة الآن." data-en="Thoughtfully chosen pieces for wherever your day takes you. Discover the new collection.">قطع مختارة بعناية لتكون جزءاً من يومك. اكتشفي مجموعتنا الجديدة الآن.</p>
-        <a class="primary-button" href="#shop"><span data-ar="اكتشفي المجموعة" data-en="Explore the collection">اكتشفي المجموعة</span><span aria-hidden="true">↙</span></a>
-        <div class="hero-note"><span class="note-star">✳</span><span data-ar="توصيل لكل مصر · الدفع عند الاستلام" data-en="Egypt-wide delivery · Cash on delivery">توصيل لكل مصر · الدفع عند الاستلام</span></div>
-      </div>
-      <div class="hero-image-wrap"><img class="hero-image" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=85" alt="A woman browsing a clothing collection" /><div class="image-label"><span data-ar="المجموعة الجديدة" data-en="The new collection">المجموعة الجديدة</span><b>01 / 04</b></div></div>
-      <span class="hero-side-text">NILO — EVERYDAY, ELEVATED</span>
+    <section class="hero">
+      <div class="hero-copy"><p class="kicker">IO — MEN'S EVERYDAY</p><h1>ستايل رجالي.<br><em>بلا تعقيد.</em></h1><p class="hero-text">قطع أساسية بتفاصيل مميزة، مصممة لتناسب يومك من أول مشوار لآخره.</p><a class="button dark" href="#shop">اكتشف المجموعة <span>←</span></a><p class="hero-note">خامات مريحة · قصّات عملية · توصيل لكل مصر</p></div>
+      <div class="hero-photo" role="img" aria-label="إطلالة رجالية كاجوال"><div class="hero-label">ESSENTIALS<br>FOR EVERY DAY</div></div>
+      <div class="hero-index">01 / 04</div>
     </section>
-    <section class="shop-section" id="shop">
-      <div class="section-heading"><div><p class="eyebrow" data-ar="اختياراتنا لكِ" data-en="A little something for you">اختياراتنا لكِ</p><h2 data-ar="تسوقي المجموعة" data-en="Shop the collection">تسوقي المجموعة</h2></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="ابحثي عن قطعة..." data-ar-placeholder="ابحثي عن قطعة..." data-en-placeholder="Search pieces..." aria-label="Search products"></label></div>
-      <div class="filter-row" id="filters"><button class="filter-chip active" data-category="all" data-ar="الكل" data-en="All">الكل</button><button class="filter-chip" data-category="tops" data-ar="توبات" data-en="Tops">توبات</button><button class="filter-chip" data-category="bottoms" data-ar="بناطيل" data-en="Bottoms">بناطيل</button><button class="filter-chip" data-category="outerwear" data-ar="جاكيتات" data-en="Outerwear">جاكيتات</button><button class="filter-chip" data-category="sets" data-ar="أطقم" data-en="Sets">أطقم</button></div>
-      <div class="product-grid" id="productGrid" aria-live="polite"></div>
-      <p class="empty-products hidden" id="emptyProducts" data-ar="لا توجد منتجات مطابقة لبحثك." data-en="No products match your search.">لا توجد منتجات مطابقة لبحثك.</p>
+    <section class="shop" id="shop">
+      <div class="section-top"><div><p class="kicker">اختيارات IO</p><h2>أساسيات خزانة الرجل</h2></div><p class="section-note">اختار القطعة المناسبة ليومك.</p></div>
+      <div class="tools"><div class="filters" id="filters"><button class="filter active" data-category="all">الكل</button><button class="filter" data-category="tops">تيشيرتات وقمصان</button><button class="filter" data-category="bottoms">بناطيل</button><button class="filter" data-category="outerwear">جاكيتات</button></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="ابحث عن قطعة..." aria-label="ابحث عن منتج"></label></div>
+      <div class="grid" id="products" aria-live="polite"></div>
+      <p class="empty hidden" id="empty">مفيش منتجات مطابقة لبحثك دلوقتي.</p>
     </section>
-    <section class="promise-strip" id="about"><div><span class="promise-icon">✳</span><h3 data-ar="اختيارات مريحة" data-en="Made for comfort">اختيارات مريحة</h3><p data-ar="قطع يومية تحبين ارتداءها." data-en="Everyday pieces you’ll love to wear.">قطع يومية تحبين ارتداءها.</p></div><div><span class="promise-icon">↗</span><h3 data-ar="توصيل في مصر" data-en="Across Egypt">توصيل في مصر</h3><p data-ar="نوصل طلبك أينما كنتِ." data-en="We deliver wherever you are.">نوصل طلبك أينما كنتِ.</p></div><div><span class="promise-icon">♡</span><h3 data-ar="الدفع عند الاستلام" data-en="Pay on delivery">الدفع عند الاستلام</h3><p data-ar="ادفعي بكل سهولة عند وصول طلبك." data-en="Pay easily when your order arrives.">ادفعي بكل سهولة عند وصول طلبك.</p></div></section>
+    <section class="about" id="about"><p class="kicker">أقل، لكن أفضل</p><h2>لبس تلبسه<br>كل يوم.</h2><p>IO علامة رجالي تركّز على القطع اليومية العملية، ألوان سهلة التنسيق، وتفاصيل تفرق.</p><a href="#shop">تسوق المجموعة <span>←</span></a></section>
   </main>
-  <footer class="site-footer"><a class="brand footer-brand" href="#home">nilo<span>.</span></a><p data-ar="ستايلك، بطريقتك." data-en="Your style, your way.">ستايلك، بطريقتك.</p><span>© <span id="year"></span> Nilo</span></footer>
-
-  <div class="overlay" id="cartOverlay" aria-hidden="true"><section class="side-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle"><div class="panel-heading"><h2 id="cartTitle" data-ar="حقيبة التسوق" data-en="Your bag">حقيبة التسوق</h2><button class="close-button" data-close="cartOverlay" aria-label="Close">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-empty" id="cartEmpty"><span>▱</span><p data-ar="حقيبتك فارغة حالياً" data-en="Your bag is empty for now">حقيبتك فارغة حالياً</p><button class="text-button" data-close="cartOverlay" data-ar="تابعي التسوق" data-en="Continue shopping">تابعي التسوق</button></div><div class="cart-footer hidden" id="cartFooter"><div class="subtotal"><span data-ar="الإجمالي" data-en="Subtotal">الإجمالي</span><strong id="cartSubtotal"></strong></div><p data-ar="تكلفة التوصيل يتم تأكيدها عند التواصل معك." data-en="Delivery fee will be confirmed when we contact you.">تكلفة التوصيل يتم تأكيدها عند التواصل معك.</p><button class="primary-button checkout-button" id="startCheckout"><span data-ar="إتمام الطلب" data-en="Checkout">إتمام الطلب</span><span>↙</span></button></div></section></div>
-  <div class="overlay" id="checkoutOverlay" aria-hidden="true"><section class="checkout-panel" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle"><div class="panel-heading"><div><p class="eyebrow" data-ar="خطوة أخيرة" data-en="One last step">خطوة أخيرة</p><h2 id="checkoutTitle" data-ar="بيانات التوصيل" data-en="Delivery details">بيانات التوصيل</h2></div><button class="close-button" data-close="checkoutOverlay" aria-label="Close">×</button></div><form id="checkoutForm"><label><span data-ar="الاسم بالكامل" data-en="Full name">الاسم بالكامل</span><input name="name" required autocomplete="name" placeholder="الاسم" data-ar-placeholder="الاسم" data-en-placeholder="Your name"></label><label><span data-ar="رقم الهاتف" data-en="Phone number">رقم الهاتف</span><input name="phone" required type="tel" inputmode="tel" autocomplete="tel" placeholder="01xxxxxxxxx" data-ar-placeholder="01xxxxxxxxx" data-en-placeholder="01xxxxxxxxx"></label><label><span data-ar="المحافظة" data-en="Governorate">المحافظة</span><select name="governorate" required><option value="" data-ar="اختاري المحافظة" data-en="Select governorate">اختاري المحافظة</option><option>القاهرة</option><option>الجيزة</option><option>الإسكندرية</option><option>القليوبية</option><option>الدقهلية</option><option>الشرقية</option><option>الغربية</option><option>المنوفية</option><option>البحيرة</option><option>كفر الشيخ</option><option>دمياط</option><option>بورسعيد</option><option>الإسماعيلية</option><option>السويس</option><option>الفيوم</option><option>بني سويف</option><option>المنيا</option><option>أسيوط</option><option>سوهاج</option><option>قنا</option><option>الأقصر</option><option>أسوان</option><option>البحر الأحمر</option><option>الوادي الجديد</option><option>مطروح</option><option>شمال سيناء</option><option>جنوب سيناء</option></select></label><label><span data-ar="العنوان بالتفصيل" data-en="Full address">العنوان بالتفصيل</span><textarea name="address" rows="3" required placeholder="المدينة، الشارع، رقم المبنى..." data-ar-placeholder="المدينة، الشارع، رقم المبنى..." data-en-placeholder="City, street, building..."></textarea></label><div class="checkout-total"><span data-ar="الإجمالي (بدون التوصيل)" data-en="Total (delivery excluded)">الإجمالي (بدون التوصيل)</span><strong id="checkoutTotal"></strong></div><button class="primary-button checkout-button" type="submit"><span data-ar="تأكيد الطلب — الدفع عند الاستلام" data-en="Place order — cash on delivery">تأكيد الطلب — الدفع عند الاستلام</span><span>↙</span></button><p class="form-note" data-ar="سنتواصل معك لتأكيد الطلب وتكلفة التوصيل." data-en="We’ll contact you to confirm your order and delivery fee.">سنتواصل معك لتأكيد الطلب وتكلفة التوصيل.</p></form></section></div>
+  <footer><a class="logo" href="#home">IO<span>.</span></a><p>ستايلك اليومي، بطريقتك.</p><small>© <span id="year"></span> IO. جميع الحقوق محفوظة.</small></footer>
+  <div class="scrim" id="scrim"></div>
+  <aside class="cart-panel" id="cartPanel" aria-hidden="true" aria-label="حقيبة التسوق"><div class="cart-head"><h2>حقيبة التسوق</h2><button id="closeCart" type="button" aria-label="إغلاق">×</button></div><div class="cart-items" id="cartItems"></div><p class="cart-empty" id="cartEmpty">حقيبتك لسه فاضية.</p><div class="cart-bottom"><div class="total"><span>الإجمالي</span><strong id="cartTotal">٠ ج.م</strong></div><p>الطلب هنا للمعاينة؛ تواصل معنا لتأكيد الطلب والدفع عند الاستلام.</p></div></aside>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
