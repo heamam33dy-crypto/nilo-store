@@ -6,7 +6,8 @@ const products=[
 {id:5,category:'tops',name:'تيشيرت بولو كحلي',en:'Navy Polo Shirt',price:850,image:'https://images.unsplash.com/photo-1625910513413-5fc4e6d9d5a5?auto=format&fit=crop&w=700&q=85',tag:''},
 {id:6,category:'bottoms',name:'بنطلون تشينو زيتي',en:'Olive Chino Trousers',price:1090,image:'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=700&q=85',tag:''},
 {id:7,category:'tops',name:'قميص أوكسفورد أزرق',en:'Blue Oxford Shirt',price:1150,image:'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=700&q=85',tag:'جديد'},
-{id:8,category:'outerwear',name:'جاكيت جينز كلاسيك',en:'Classic Denim Jacket',price:1790,image:'https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=700&q=85',tag:''}
+{id:8,category:'outerwear',name:'جاكيت جينز كلاسيك',en:'Classic Denim Jacket',price:1790,image:'https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=700&q=85',tag:''},
+{id:9,category:'bottoms',name:'جينز واسع أزرق فاتح',en:'Light Blue Wide-Leg Jeans',price:1150,image:'./b6b7e47b-fc28-4499-b614-7d4dc1a65dd7.png',tag:'جديد'}
 ];
 let category='all',cart=[];
 try{const saved=JSON.parse(localStorage.getItem('io-cart')||'[]');if(Array.isArray(saved))cart=saved}catch{}
