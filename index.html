@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101513">
-  <meta name="description" content="IO — ملابس رجالي يومية بتصميم بسيط وجودة مختارة. اكتشف مجموعتنا الآن.">
-  <title>IO — ملابس رجالي</title>
+  <meta name="theme-color" content="#101323">
+  <meta name="description" content="PLAYZONE — ألعاب بلايستيشن وإكسسوارات PS5 وPS4. تصفح الأقراص والنسخ الرقمية والإضافات.">
+  <title>PLAYZONE — ألعاب بلايستيشن</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,29 +13,34 @@
   <script src="io.js" defer></script>
 </head>
 <body>
-  <div class="topline">توصيل لجميع أنحاء مصر <span>•</span> الدفع عند الاستلام</div>
+  <div class="topline">عالم ألعاب PlayStation <span>•</span> الدفع عند الاستلام متاح</div>
   <header class="header" id="home">
-    <a class="logo" href="#home" aria-label="IO الصفحة الرئيسية">IO<span>.</span></a>
-    <nav aria-label="التنقل الرئيسي"><a href="#home">الرئيسية</a><a href="#shop">تسوق</a><a href="#about">عن IO</a></nav>
-    <button class="cart-toggle" id="cartToggle" type="button" aria-label="افتح سلة التسوق">الحقيبة <span id="cartCount">0</span></button>
+    <a class="logo" href="#home" aria-label="PLAYZONE الرئيسية">PLAY<span>ZONE</span><b>®</b></a>
+    <nav aria-label="التنقل الرئيسي"><a href="#home">الرئيسية</a><a href="#shop">الألعاب</a><a href="#about">عن المتجر</a></nav>
+    <button class="cart-toggle" id="cartToggle" type="button" aria-label="افتح سلة التسوق">السلة <span id="cartCount">0</span></button>
   </header>
   <main>
-    <section class="hero">
-      <div class="hero-copy"><p class="kicker">IO — MEN'S EVERYDAY</p><h1>ستايل رجالي.<br><em>بلا تعقيد.</em></h1><p class="hero-text">قطع أساسية بتفاصيل مميزة، مصممة لتناسب يومك من أول مشوار لآخره.</p><a class="button dark" href="#shop">اكتشف المجموعة <span>←</span></a><p class="hero-note">خامات مريحة · قصّات عملية · توصيل لكل مصر</p></div>
-      <div class="hero-photo" role="img" aria-label="إطلالة رجالية كاجوال"><div class="hero-label">ESSENTIALS<br>FOR EVERY DAY</div></div>
-      <div class="hero-index">01 / 04</div>
+    <section class="hero" id="home">
+      <div class="hero-copy"><p class="kicker">PLAYZONE — LEVEL UP</p><h1>اللعبة اللي<br><em>مستنيها هنا.</em></h1><p class="hero-text">ألعاب PS5 وPS4، نسخ أقراص ورقمية، إضافات وإكسسوارات—اختار مغامرتك الجاية.</p><a class="hero-cta" href="#shop">تصفح الألعاب <span>←</span></a><div class="hero-meta"><span>PS5</span><span>PS4</span><span>GAMES • DLC • GEAR</span></div></div>
+      <div class="hero-art" role="img" aria-label="خلفية ألعاب بألوان بنفسجية وزرقاء"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="console-mark">PLAY<br>YOUR<br>WAY<span>✦</span></div><div class="hero-label">YOUR NEXT<br>ADVENTURE</div></div>
+      <div class="hero-index">01 / PLAY</div>
     </section>
     <section class="shop" id="shop">
-      <div class="section-top"><div><p class="kicker">اختيارات IO</p><h2>أساسيات خزانة الرجل</h2></div><p class="section-note">اختار القطعة المناسبة ليومك.</p></div>
-      <div class="tools"><div class="filters" id="filters"><button class="filter active" data-category="all">الكل</button><button class="filter" data-category="tops">تيشيرتات وقمصان</button><button class="filter" data-category="bottoms">بناطيل</button><button class="filter" data-category="outerwear">جاكيتات</button></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="ابحث عن قطعة..." aria-label="ابحث عن منتج"></label></div>
+      <div class="section-top"><div><p class="kicker">اختار لعبتك</p><h2>مكتبة PLAYZONE</h2></div><p class="section-note">فلتر حسب المنصة والنوع والناشر والنسخة، أو دور على لعبتك المفضلة.</p></div>
+      <div class="tools"><div class="filters" id="filters" aria-label="تصفية حسب القسم"><button class="filter active" data-category="all">الكل</button><button class="filter" data-category="ps5">PS5</button><button class="filter" data-category="ps4">PS4</button><button class="filter" data-category="discs">أقراص CD</button><button class="filter" data-category="digital">رقمية</button><button class="filter" data-category="dlc">DLC وإضافات</button><button class="filter" data-category="accessories">إكسسوارات</button></div>
+        <div class="search"><label class="visually-hidden" for="search">ابحث عن لعبة</label><input id="search" type="search" placeholder="ابحث عن لعبة أو ناشر…"></div>
+      </div>
+      <div class="filters secondary-filters" aria-label="تصفية حسب النوع"><span class="filter-label">النوع:</span><select id="genreFilter" aria-label="فلتر النوع"><option value="all">كل الأنواع</option><option>أكشن ومغامرات</option><option>رياضة</option><option>سباق</option><option>تصويب</option><option>عائلي</option><option>إكسسوارات</option></select><label class="filter-label" for="publisherFilter">الناشر:</label><select id="publisherFilter" aria-label="فلتر الناشر"><option value="all">كل الناشرين</option></select><label class="filter-label" for="editionFilter">النسخة:</label><select id="editionFilter" aria-label="فلتر النسخة"><option value="all">كل النسخ</option><option value="Standard">Standard</option><option value="Deluxe">Deluxe</option><option value="Ultimate">Ultimate</option><option value="Digital">Digital</option><option value="Disc">Disc</option><option value="DLC">DLC</option><option value="Accessory">إكسسوار</option></select><label class="filter-label" for="sortFilter">الترتيب:</label><select id="sortFilter" aria-label="ترتيب السعر"><option value="featured">الأكثر تميزًا</option><option value="low">السعر: من الأقل</option><option value="high">السعر: من الأعلى</option></select></div>
+      <div class="price-filter"><label for="maxPrice">أعلى سعر: <span id="maxPriceLabel">كل الأسعار</span></label><input id="maxPrice" type="range" min="500" max="50000" step="500" value="50000"></div>
       <div class="grid" id="products" aria-live="polite"></div>
-      <p class="empty hidden" id="empty">مفيش منتجات مطابقة لبحثك دلوقتي.</p>
+      <p class="empty hidden" id="empty">مفيش منتجات مطابقة للفلاتر دي.</p>
     </section>
-    <section class="about" id="about"><p class="kicker">أقل، لكن أفضل</p><h2>لبس تلبسه<br>كل يوم.</h2><p>IO علامة رجالي تركّز على القطع اليومية العملية، ألوان سهلة التنسيق، وتفاصيل تفرق.</p><a href="#shop">تسوق المجموعة <span>←</span></a></section>
+    <section class="about" id="about"><p class="kicker">PLAYZONE — GAME ON</p><h2>كل اللي تحتاجه<br>للـ Level Up.</h2><p>متجر ألعاب وإكسسوارات PlayStation. تفاصيل السعر والنسخة والمنصة موضحة لكل منتج.</p></section>
   </main>
-  <footer><a class="logo" href="#home">IO<span>.</span></a><p>ستايلك اليومي، بطريقتك.</p><small>© <span id="year"></span> IO. جميع الحقوق محفوظة.</small></footer>
+  <footer><a class="logo" href="#home">PLAY<span>ZONE</span><b>®</b></a><p>اللعب يبدأ من هنا.</p><small>© <span id="year"></span> PLAYZONE. جميع الحقوق محفوظة.</small></footer>
   <div class="scrim" id="scrim"></div>
-  <aside class="cart-panel" id="cartPanel" aria-hidden="true" aria-label="حقيبة التسوق"><div class="cart-head"><h2>حقيبة التسوق</h2><button id="closeCart" type="button" aria-label="إغلاق">×</button></div><div class="cart-items" id="cartItems"></div><p class="cart-empty" id="cartEmpty">حقيبتك لسه فاضية.</p><div class="cart-bottom"><div class="total"><span>الإجمالي</span><strong id="cartTotal">٠ ج.م</strong></div><p>الطلب هنا للمعاينة؛ تواصل معنا لتأكيد الطلب والدفع عند الاستلام.</p></div></aside>
+  <aside class="cart-panel" id="cartPanel" aria-hidden="true" aria-label="سلة التسوق"><div class="cart-head"><h2>سلة التسوق</h2><button id="closeCart" type="button" aria-label="إغلاق السلة">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-empty" id="cartEmpty">السلة فاضية لسه. اختار لعبتك!</div><div class="cart-bottom"><div class="total"><span>الإجمالي</span><strong id="cartTotal">0 ج.م.</strong></div><button class="checkout-button" id="checkoutOpen" type="button">إتمام الطلب</button><p class="secure-note">بيانات البطاقة لا تُطلب ولا تُحفظ في هذا المتجر.</p></div></aside>
+  <dialog class="checkout-dialog" id="checkoutDialog" aria-labelledby="checkoutTitle"><form id="checkoutForm"><div class="checkout-head"><div><p class="kicker">خطوة أخيرة</p><h2 id="checkoutTitle">إتمام الطلب</h2></div><button class="dialog-close" id="checkoutClose" type="button" aria-label="إغلاق">×</button></div><div class="checkout-layout"><div class="checkout-fields"><label>الاسم بالكامل<input name="name" autocomplete="name" required maxlength="100"></label><label>رقم الهاتف<input name="phone" type="tel" autocomplete="tel" required maxlength="25" placeholder="01xxxxxxxxx"></label><label>المحافظة / المدينة<input name="city" autocomplete="address-level2" required maxlength="100"></label><label>العنوان بالتفصيل<textarea name="address" autocomplete="street-address" required maxlength="500" rows="3"></textarea></label><fieldset class="payment-options"><legend>طريقة الدفع</legend><label class="payment-choice"><input type="radio" name="payment" value="cod" checked><span><b>الدفع عند الاستلام</b><small>ادفع عند وصول طلبك</small></span></label><label class="payment-choice"><input type="radio" name="payment" value="card"><span><b>بطاقة بنكية</b><small>الدفع الإلكتروني يحتاج بوابة دفع آمنة</small></span></label><label class="payment-choice"><input type="radio" name="payment" value="wallet"><span><b>محفظة إلكترونية</b><small>الدفع الإلكتروني يحتاج بوابة دفع آمنة</small></span></label><p class="secure-note">لن نطلب رقم البطاقة أو الرقم السري هنا. الدفع بالبطاقة أو المحفظة غير متاح حتى توصيل بوابة دفع رسمية.</p></fieldset></div><div class="order-summary"><h3>ملخص الطلب</h3><div id="checkoutItems"></div><div class="total"><span>الإجمالي</span><strong id="checkoutTotal">0 ج.م.</strong></div><p class="form-status" id="formStatus" role="status" aria-live="polite"></p><button class="checkout-button" type="submit">تأكيد الطلب</button><small>إرسال الطلب يتطلب إعداد رابط استقبال الطلبات من المتجر.</small></div></div></form></dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
