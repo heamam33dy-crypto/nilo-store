@@ -3,45 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101323">
-  <meta name="description" content="AI Office — اختر وكلاء الذكاء الاصطناعي ووزّع عليهم مهام عملك. تجربة مجانية 7 أيام وخطة شهرية بـ100 ريال.">
-  <title>AI Office — مكتبك الذكي</title>
+  <meta name="theme-color" content="#f4f7f5">
+  <meta name="description" content="مكاتب افتراضية بسيطة: مكتب للذكاء الاصطناعي ومكتب عمل شخصي، بدون اشتراك أو دفع.">
+  <title>مكاتبي — مساحة عمل افتراضية</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="io.css">
   <script src="io.js" defer></script>
 </head>
 <body>
-  <div class="topline">مكتبك الذكي، على طريقتك <span>•</span> تجربة مجانية 7 أيام</div>
-  <header class="header" id="home">
-    <a class="logo" href="#home" aria-label="AI Office الرئيسية">AI<span> OFFICE</span><b>✦</b></a>
-    <nav aria-label="التنقل الرئيسي"><a href="#agents">الوكلاء</a><a href="#how">كيف يعمل</a><a href="#plans">الاشتراك</a></nav>
-    <a class="header-cta" href="#setup">ابدأ مجانًا</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="العودة إلى المكاتب"><span class="brand-icon">م</span><span>مكاتبي<small>مساحة عملك الهادئة</small></span></a>
+    <nav class="top-actions" aria-label="التنقل"><a href="#offices">المكاتب</a><button class="button button-light" id="shareButton" type="button">نسخ رابط المكتب</button></nav>
   </header>
   <main>
-    <section class="hero">
-      <div class="hero-copy"><p class="kicker">YOUR AI TEAM, YOUR RULES</p><h1>فريق ذكاء اصطناعي<br><em>يشتغل على طلبك.</em></h1><p class="hero-text">اختار الوكلاء المناسبين، عيّن لكل واحد شغلانته، وخلّي فريقك الرقمي يساعدك في مهام المكتب والتسويق والبرمجة وخدمة العملاء.</p><a class="hero-cta" href="#setup">كوّن فريقك <span>←</span></a><div class="hero-meta"><span>4+ وكلاء</span><span>تجربة 7 أيام</span><span>100 ريال / شهر</span></div></div>
-      <div class="hero-art" role="img" aria-label="مكتب عمل رقمي للذكاء الاصطناعي"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="console-mark">AI<br>TEAM<span>✦</span></div><div class="hero-label">ONE TEAM<br>MANY POSSIBILITIES</div></div>
+    <section class="welcome" id="welcome">
+      <div class="welcome-copy"><span class="eyebrow">مساحة واحدة، بطريقتك</span><h1>اختار مكتبك<br><span>وابدأ على راحتك.</span></h1><p>مكتب للذكاء الاصطناعي ومكتب عمل شخصي. بدون اشتراك أو دفع — اختر مساحة وشارك رابطها.</p></div>
+      <div class="welcome-art" aria-hidden="true"><div class="sun"></div><div class="art-window"><i></i><i></i><i></i><div class="plant">♧</div><div class="desk"></div><div class="chair"></div></div><div class="art-leaf leaf-one">✦</div><div class="art-leaf leaf-two">✧</div></div>
     </section>
-    <section class="shop" id="agents">
-      <div class="section-top"><div><p class="kicker">اختار مساعديك</p><h2>وكلاء الذكاء الاصطناعي</h2></div><p class="section-note">اختار وكيل واحد أو أكثر، وبعدها حدّد المهمة اللي تحب كل وكيل يساعدك فيها.</p></div>
-      <div class="agent-grid" id="agentsGrid" aria-live="polite"></div>
+
+    <section class="office-section" id="offices">
+      <div class="section-heading"><div><span class="eyebrow">مساحات العمل</span><h2>اختار مكتبًا</h2></div><p>كل مكتب له رابط ومساحة مستقلة في هذه الواجهة.</p></div>
+      <div class="office-grid" id="officeGrid"></div>
     </section>
-    <section class="setup-section" id="setup">
-      <div class="section-top"><div><p class="kicker">رتّب فريقك</p><h2>كل وكيل له مهمة</h2></div><p class="section-note">حدد استخدامك، واكتب تفاصيل اختيارية عشان نجهز طلبك.</p></div>
-      <form class="setup-card" id="setupForm">
-        <div class="selected-agents" id="selectedAgents"><p class="selection-hint">اختار وكيلًا واحدًا على الأقل من القائمة بالأعلى.</p></div>
-        <label class="notes-label">إيش الشغل أو المجال اللي تبغى فريقك يساعدك فيه؟<textarea id="workNotes" maxlength="500" rows="3" placeholder="مثال: تنظيم المواعيد، كتابة منشورات، الرد على استفسارات العملاء…"></textarea></label>
-        <div class="contact-grid"><label>اسمك<input id="customerName" required maxlength="100" autocomplete="name" placeholder="الاسم"></label><label>رقم التواصل<input id="customerPhone" required type="tel" maxlength="25" autocomplete="tel" placeholder="رقم الجوال"></label></div>
-        <div class="plan-box" id="plans"><div><p class="kicker">خطة واحدة، فريق على اختيارك</p><h3>تجربة مجانية لمدة 7 أيام</h3><p>بعد التجربة: 100 ريال شهريًا. يمكنك طلب إلغاء الاشتراك.</p></div><strong>100 <small>ريال / شهر</small></strong></div>
-        <p class="notice">تنبيه: هذه صفحة تعريفية لتجميع طلبات الاشتراك عبر واتساب. إنشاء الحسابات، تشغيل الوكلاء، وتجديد الاشتراك أو تحصيل الدفع تلقائيًا يحتاج إعداد خادم وبوابات رسمية لحسابات مزودي الذكاء الاصطناعي.</p>
-        <button class="checkout-button" type="submit">أرسل اختيار فريقي على واتساب</button><p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-      </form>
+
+    <section class="workspace hidden" id="workspace" aria-live="polite">
+      <div class="workspace-heading"><div><a class="back-link" href="./">← كل المكاتب</a><span class="eyebrow" id="officeType"></span><h2 id="officeTitle"></h2><p id="officeDescription"></p></div><button class="button button-primary" id="workspaceShare" type="button">مشاركة رابط المكتب</button></div>
+      <div class="room-layout">
+        <aside class="room-sidebar"><h3>مساحات المكتب</h3><button class="room-link active" data-room="chat"><span>▤</span> مساحة الملاحظات</button><button class="room-link" data-room="tasks"><span>✓</span> قائمة المهام</button><button class="room-link" data-room="meeting"><span>◷</span> غرفة الاجتماع</button><p class="sidebar-note">واجهة تجريبية بسيطة. لا ترسل معلومات حساسة.</p></aside>
+        <div class="room-content">
+          <section class="room-panel" id="room-chat"><div class="panel-heading"><div><span class="room-icon">✎</span><div><h3>مساحة الملاحظات</h3><p>اكتب أفكارك واحفظها في هذا المتصفح.</p></div></div></div><div class="messages" id="messages" aria-live="polite"></div><form class="composer" id="messageForm"><label class="visually-hidden" for="messageInput">اكتب ملاحظة</label><input id="messageInput" maxlength="500" placeholder="اكتب ملاحظة أو فكرة..." autocomplete="off"><button class="button button-primary" type="submit">إضافة</button></form></section>
+          <section class="room-panel hidden" id="room-tasks"><div class="panel-heading"><div><span class="room-icon">✓</span><div><h3>قائمة المهام</h3><p>أضف مهامًا وتابع إنجازها.</p></div></div></div><ul class="task-list" id="taskList"></ul><form class="composer" id="taskForm"><label class="visually-hidden" for="taskInput">اكتب مهمة</label><input id="taskInput" maxlength="160" placeholder="ما المهمة التالية؟"><button class="button button-primary" type="submit">أضف مهمة</button></form></section>
+          <section class="room-panel hidden" id="room-meeting"><div class="panel-heading"><div><span class="room-icon">◷</span><div><h3>غرفة الاجتماع</h3><p>رتب أفكار الاجتماع في مكان واحد.</p></div></div></div><div class="meeting-card"><span class="meeting-symbol">✦</span><h4>مساحة جاهزة للاجتماع</h4><p>اكتب موضوع الاجتماع أو النقاط التي تريد مناقشتها. هذه الغرفة لا تنشئ مكالمة صوتية أو فيديو.</p><textarea id="meetingNotes" rows="5" maxlength="1000" placeholder="موضوع الاجتماع والنقاط..."></textarea><span class="save-status" id="saveStatus">يُحفظ تلقائيًا في هذا المتصفح</span></div></section>
+        </div>
+      </div>
+      <p class="privacy-note">مهم: هذه نسخة ثابتة على GitHub Pages. الروابط ليست خاصة أو محمية بكلمة مرور، والبيانات تُحفظ محليًا في المتصفح فقط. لا توجد خدمة ذكاء اصطناعي أو مزامنة بين الأجهزة حاليًا.</p>
     </section>
-    <section class="about" id="how"><p class="kicker">بسيطة وواضحة</p><h2>اختار. وزّع. ابدأ.</h2><p>حدد الوكلاء، عيّن لكل واحد مجال عمل من القائمة أو اكتب احتياجك، ثم أرسل طلبك. سنتواصل معك لتأكيد توفر الخدمة وإعداد الحساب.</p><div class="steps"><div><b>01</b><h3>اختار الوكلاء</h3><p>حدد الأدوات اللي تناسب فريقك.</p></div><div><b>02</b><h3>وزّع المهام</h3><p>اختار مجال كل وكيل وحدد تفاصيلك.</p></div><div><b>03</b><h3>ابدأ التجربة</h3><p>اطلب تفعيل تجربة مجانية 7 أيام.</p></div></div></section>
   </main>
-  <footer><a class="logo" href="#home">AI<span> OFFICE</span><b>✦</b></a><p>فريقك الذكي، حسب احتياجك.</p><small>© <span id="year"></span> AI Office</small></footer>
+  <footer><span>مكاتبي</span><span>مساحات بسيطة للعمل والتركيز</span></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
