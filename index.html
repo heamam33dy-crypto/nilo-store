@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101323">
-  <meta name="description" content="PLAYZONE — ألعاب بلايستيشن وإكسسوارات PS5 وPS4. تصفح الأقراص والنسخ الرقمية والإضافات.">
-  <title>PLAYZONE — ألعاب بلايستيشن</title>
+  <meta name="description" content="AI Office — اختر وكلاء الذكاء الاصطناعي ووزّع عليهم مهام عملك. تجربة مجانية 7 أيام وخطة شهرية بـ100 ريال.">
+  <title>AI Office — مكتبك الذكي</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,34 +13,35 @@
   <script src="io.js" defer></script>
 </head>
 <body>
-  <div class="topline">عالم ألعاب PlayStation <span>•</span> الدفع عند الاستلام متاح</div>
+  <div class="topline">مكتبك الذكي، على طريقتك <span>•</span> تجربة مجانية 7 أيام</div>
   <header class="header" id="home">
-    <a class="logo" href="#home" aria-label="PLAYZONE الرئيسية">PLAY<span>ZONE</span><b>®</b></a>
-    <nav aria-label="التنقل الرئيسي"><a href="#home">الرئيسية</a><a href="#shop">الألعاب</a><a href="#about">عن المتجر</a></nav>
-    <button class="cart-toggle" id="cartToggle" type="button" aria-label="افتح سلة التسوق">السلة <span id="cartCount">0</span></button>
+    <a class="logo" href="#home" aria-label="AI Office الرئيسية">AI<span> OFFICE</span><b>✦</b></a>
+    <nav aria-label="التنقل الرئيسي"><a href="#agents">الوكلاء</a><a href="#how">كيف يعمل</a><a href="#plans">الاشتراك</a></nav>
+    <a class="header-cta" href="#setup">ابدأ مجانًا</a>
   </header>
   <main>
-    <section class="hero" id="home">
-      <div class="hero-copy"><p class="kicker">PLAYZONE — LEVEL UP</p><h1>اللعبة اللي<br><em>مستنيها هنا.</em></h1><p class="hero-text">ألعاب PS5 وPS4، نسخ أقراص ورقمية، إضافات وإكسسوارات—اختار مغامرتك الجاية.</p><a class="hero-cta" href="#shop">تصفح الألعاب <span>←</span></a><div class="hero-meta"><span>PS5</span><span>PS4</span><span>GAMES • DLC • GEAR</span></div></div>
-      <div class="hero-art" role="img" aria-label="خلفية ألعاب بألوان بنفسجية وزرقاء"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="console-mark">PLAY<br>YOUR<br>WAY<span>✦</span></div><div class="hero-label">YOUR NEXT<br>ADVENTURE</div></div>
-      <div class="hero-index">01 / PLAY</div>
+    <section class="hero">
+      <div class="hero-copy"><p class="kicker">YOUR AI TEAM, YOUR RULES</p><h1>فريق ذكاء اصطناعي<br><em>يشتغل على طلبك.</em></h1><p class="hero-text">اختار الوكلاء المناسبين، عيّن لكل واحد شغلانته، وخلّي فريقك الرقمي يساعدك في مهام المكتب والتسويق والبرمجة وخدمة العملاء.</p><a class="hero-cta" href="#setup">كوّن فريقك <span>←</span></a><div class="hero-meta"><span>4+ وكلاء</span><span>تجربة 7 أيام</span><span>100 ريال / شهر</span></div></div>
+      <div class="hero-art" role="img" aria-label="مكتب عمل رقمي للذكاء الاصطناعي"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="console-mark">AI<br>TEAM<span>✦</span></div><div class="hero-label">ONE TEAM<br>MANY POSSIBILITIES</div></div>
     </section>
-    <section class="shop" id="shop">
-      <div class="section-top"><div><p class="kicker">اختار لعبتك</p><h2>مكتبة PLAYZONE</h2></div><p class="section-note">فلتر حسب المنصة والنوع والناشر والنسخة، أو دور على لعبتك المفضلة.</p></div>
-      <div class="tools"><div class="filters" id="filters" aria-label="تصفية حسب القسم"><button class="filter active" data-category="all">الكل</button><button class="filter" data-category="ps5">PS5</button><button class="filter" data-category="ps4">PS4</button><button class="filter" data-category="discs">أقراص CD</button><button class="filter" data-category="digital">رقمية</button><button class="filter" data-category="dlc">DLC وإضافات</button><button class="filter" data-category="accessories">إكسسوارات</button></div>
-        <div class="search"><label class="visually-hidden" for="search">ابحث عن لعبة</label><input id="search" type="search" placeholder="ابحث عن لعبة أو ناشر…"></div>
-      </div>
-      <div class="filters secondary-filters" aria-label="تصفية حسب النوع"><span class="filter-label">النوع:</span><select id="genreFilter" aria-label="فلتر النوع"><option value="all">كل الأنواع</option><option>أكشن ومغامرات</option><option>رياضة</option><option>سباق</option><option>تصويب</option><option>عائلي</option><option>إكسسوارات</option></select><label class="filter-label" for="publisherFilter">الناشر:</label><select id="publisherFilter" aria-label="فلتر الناشر"><option value="all">كل الناشرين</option></select><label class="filter-label" for="editionFilter">النسخة:</label><select id="editionFilter" aria-label="فلتر النسخة"><option value="all">كل النسخ</option><option value="Standard">Standard</option><option value="Deluxe">Deluxe</option><option value="Ultimate">Ultimate</option><option value="Digital">Digital</option><option value="Disc">Disc</option><option value="DLC">DLC</option><option value="Accessory">إكسسوار</option></select><label class="filter-label" for="sortFilter">الترتيب:</label><select id="sortFilter" aria-label="ترتيب السعر"><option value="featured">الأكثر تميزًا</option><option value="low">السعر: من الأقل</option><option value="high">السعر: من الأعلى</option></select></div>
-      <div class="price-filter"><label for="maxPrice">أعلى سعر: <span id="maxPriceLabel">كل الأسعار</span></label><input id="maxPrice" type="range" min="500" max="50000" step="500" value="50000"></div>
-      <div class="grid" id="products" aria-live="polite"></div>
-      <p class="empty hidden" id="empty">مفيش منتجات مطابقة للفلاتر دي.</p>
+    <section class="shop" id="agents">
+      <div class="section-top"><div><p class="kicker">اختار مساعديك</p><h2>وكلاء الذكاء الاصطناعي</h2></div><p class="section-note">اختار وكيل واحد أو أكثر، وبعدها حدّد المهمة اللي تحب كل وكيل يساعدك فيها.</p></div>
+      <div class="agent-grid" id="agentsGrid" aria-live="polite"></div>
     </section>
-    <section class="about" id="about"><p class="kicker">PLAYZONE — GAME ON</p><h2>كل اللي تحتاجه<br>للـ Level Up.</h2><p>متجر ألعاب وإكسسوارات PlayStation. تفاصيل السعر والنسخة والمنصة موضحة لكل منتج.</p></section>
+    <section class="setup-section" id="setup">
+      <div class="section-top"><div><p class="kicker">رتّب فريقك</p><h2>كل وكيل له مهمة</h2></div><p class="section-note">حدد استخدامك، واكتب تفاصيل اختيارية عشان نجهز طلبك.</p></div>
+      <form class="setup-card" id="setupForm">
+        <div class="selected-agents" id="selectedAgents"><p class="selection-hint">اختار وكيلًا واحدًا على الأقل من القائمة بالأعلى.</p></div>
+        <label class="notes-label">إيش الشغل أو المجال اللي تبغى فريقك يساعدك فيه؟<textarea id="workNotes" maxlength="500" rows="3" placeholder="مثال: تنظيم المواعيد، كتابة منشورات، الرد على استفسارات العملاء…"></textarea></label>
+        <div class="contact-grid"><label>اسمك<input id="customerName" required maxlength="100" autocomplete="name" placeholder="الاسم"></label><label>رقم التواصل<input id="customerPhone" required type="tel" maxlength="25" autocomplete="tel" placeholder="رقم الجوال"></label></div>
+        <div class="plan-box" id="plans"><div><p class="kicker">خطة واحدة، فريق على اختيارك</p><h3>تجربة مجانية لمدة 7 أيام</h3><p>بعد التجربة: 100 ريال شهريًا. يمكنك طلب إلغاء الاشتراك.</p></div><strong>100 <small>ريال / شهر</small></strong></div>
+        <p class="notice">تنبيه: هذه صفحة تعريفية لتجميع طلبات الاشتراك عبر واتساب. إنشاء الحسابات، تشغيل الوكلاء، وتجديد الاشتراك أو تحصيل الدفع تلقائيًا يحتاج إعداد خادم وبوابات رسمية لحسابات مزودي الذكاء الاصطناعي.</p>
+        <button class="checkout-button" type="submit">أرسل اختيار فريقي على واتساب</button><p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <section class="about" id="how"><p class="kicker">بسيطة وواضحة</p><h2>اختار. وزّع. ابدأ.</h2><p>حدد الوكلاء، عيّن لكل واحد مجال عمل من القائمة أو اكتب احتياجك، ثم أرسل طلبك. سنتواصل معك لتأكيد توفر الخدمة وإعداد الحساب.</p><div class="steps"><div><b>01</b><h3>اختار الوكلاء</h3><p>حدد الأدوات اللي تناسب فريقك.</p></div><div><b>02</b><h3>وزّع المهام</h3><p>اختار مجال كل وكيل وحدد تفاصيلك.</p></div><div><b>03</b><h3>ابدأ التجربة</h3><p>اطلب تفعيل تجربة مجانية 7 أيام.</p></div></div></section>
   </main>
-  <footer><a class="logo" href="#home">PLAY<span>ZONE</span><b>®</b></a><p>اللعب يبدأ من هنا.</p><small>© <span id="year"></span> PLAYZONE. جميع الحقوق محفوظة.</small></footer>
-  <div class="scrim" id="scrim"></div>
-  <aside class="cart-panel" id="cartPanel" aria-hidden="true" aria-label="سلة التسوق"><div class="cart-head"><h2>سلة التسوق</h2><button id="closeCart" type="button" aria-label="إغلاق السلة">×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-empty" id="cartEmpty">السلة فاضية لسه. اختار لعبتك!</div><div class="cart-bottom"><div class="total"><span>الإجمالي</span><strong id="cartTotal">0 ج.م.</strong></div><button class="checkout-button" id="checkoutOpen" type="button">إتمام الطلب</button><p class="secure-note">بيانات البطاقة لا تُطلب ولا تُحفظ في هذا المتجر.</p></div></aside>
-  <dialog class="checkout-dialog" id="checkoutDialog" aria-labelledby="checkoutTitle"><form id="checkoutForm"><div class="checkout-head"><div><p class="kicker">خطوة أخيرة</p><h2 id="checkoutTitle">إتمام الطلب</h2></div><button class="dialog-close" id="checkoutClose" type="button" aria-label="إغلاق">×</button></div><div class="checkout-layout"><div class="checkout-fields"><label>الاسم بالكامل<input name="name" autocomplete="name" required maxlength="100"></label><label>رقم الهاتف<input name="phone" type="tel" autocomplete="tel" required maxlength="25" placeholder="01xxxxxxxxx"></label><label>المحافظة / المدينة<input name="city" autocomplete="address-level2" required maxlength="100"></label><label>العنوان بالتفصيل<textarea name="address" autocomplete="street-address" required maxlength="500" rows="3"></textarea></label><fieldset class="payment-options"><legend>طريقة الدفع</legend><label class="payment-choice"><input type="radio" name="payment" value="cod" checked><span><b>الدفع عند الاستلام</b><small>ادفع عند وصول طلبك</small></span></label><label class="payment-choice"><input type="radio" name="payment" value="card"><span><b>بطاقة بنكية</b><small>الدفع الإلكتروني يحتاج بوابة دفع آمنة</small></span></label><label class="payment-choice"><input type="radio" name="payment" value="wallet"><span><b>محفظة إلكترونية</b><small>الدفع الإلكتروني يحتاج بوابة دفع آمنة</small></span></label><p class="secure-note">لن نطلب رقم البطاقة أو الرقم السري هنا. الدفع بالبطاقة أو المحفظة غير متاح حتى توصيل بوابة دفع رسمية.</p></fieldset></div><div class="order-summary"><h3>ملخص الطلب</h3><div id="checkoutItems"></div><div class="total"><span>الإجمالي</span><strong id="checkoutTotal">0 ج.م.</strong></div><p class="form-status" id="formStatus" role="status" aria-live="polite"></p><button class="checkout-button" type="submit">تأكيد الطلب</button><small>إرسال الطلب يتطلب إعداد رابط استقبال الطلبات من المتجر.</small></div></div></form></dialog>
+  <footer><a class="logo" href="#home">AI<span> OFFICE</span><b>✦</b></a><p>فريقك الذكي، حسب احتياجك.</p><small>© <span id="year"></span> AI Office</small></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
